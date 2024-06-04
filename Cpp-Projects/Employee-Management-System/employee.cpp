@@ -49,7 +49,7 @@ void displayEmployeeDetails()
         return;
     }
 
-    for(size_t i=0; emp_names.size(); i++)
+    for(size_t i=0; i< emp_names.size(); ++i)
     {
         cout << "Employee name : " << emp_names[i] << endl;
         cout << "Employee ID : " << emp_IDs[i] << endl;
@@ -58,7 +58,6 @@ void displayEmployeeDetails()
         for(const auto& task : emp_tasks[i])
         {
             cout << "Task ID : " << task.first << " , Task description : " << task.second << endl;
-
         }
         cout << endl;
     }
@@ -115,7 +114,8 @@ int main()
 {
     int choice;
 
-    do{
+    do
+    {
 
         cout << "< Employee Management System >" << endl;
         cout << "................................" << endl;
@@ -153,7 +153,8 @@ int main()
         }
 
 
-    }while(choice!=4);
+    }
+    while(choice != 4);
 
     cout << endl;
 
